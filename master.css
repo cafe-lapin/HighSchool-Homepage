@@ -75,6 +75,7 @@ body{
     left: 0;
     right: 0;
     height: 30px;
+    cursor: default;
 }
 .ball {
     display: inline-block;
@@ -85,6 +86,8 @@ body{
     box-sizing: border-box;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.596);
+    cursor: pointer;
+
 }
 .box {
     width: 100%;
