@@ -17,7 +17,16 @@
 
         </div>
     </div>
-    <div class="banner">
+    <div class="banner-box">
+        <div class="banner" id="b1" slide="1">
+
+        </div>
+        <div class="banner" id="b2" slide="2">
+
+        </div>
+        <div class="banner" id="b3" slide="3">
+
+        </div>
         <div class="border">
             <div class="ball" onclick="changeBanner(this, 1)">
 
@@ -59,22 +68,27 @@
               }
         });
         function changeBanner(ball, id){
-            var color = ''
-            switch(id) {
-                case 1:
-                    color = 'red'
-                    break;
-                case 2:
-                    color = 'blue'
-                    break;
-                case 3:
-                    color = 'yellow'
-                    break;
-            }
-            $('.banner').css('background-color',color)
+            const slider = [$('#b1'),$('#b2'),$('#b3')]
+            while($(`#b${id}`).attr('slide')  !== '1'){
+                slider.forEach(s=> {
+                    switch(s.attr('slide')){
+                        case '0': 
+                            s.attr('slide','2')
+                            break;
+                        case '1':
+                            s.attr('slide','0')
+                            break;
+                        case '2':
+                            s.attr('slide','1')
+                            break;
+                        case '3':
+                            s.attr('slide','2')
+                            break;
+                        }    
+                    })
+                }
             $('.ball').css('width','10px').css('height','10px')
             $(ball).css('width','13px').css('height','13px')
-
         }
     </script>
 </body>
