@@ -3,22 +3,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./master.css">
+    <style>
+        body {
+            background-color: rgba(53, 53, 53, 0.658);
+            
+        }
+        .box  {
+            width: 400px;
+            height: 500px;
+            background-color: white;
+            margin: 110px auto;
+            box-shadow: 0 0 13px black;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .input-Box {
+            display: inline-block;
+            width: 300px;
+            height: 50px;
+        }
+        #id-Box {
+            margin-top: 140px;
+            box-sizing: border-box;
+            padding: 0 auto;
+        }
+        #pw-Box {
+            margin-top: 7px;
+            margin-left: -8px;
+        }
+        .id-text {
+            font-size: 22px;
+        }
+        .pw-text {
+            font-size: 20px;
+        }
+        .Login {
+            width: 230px;
+            height: 50px;
+        }
+        .id {
+            height: 30px;
+        }
+        .pw {
+            height: 30px;
+        }
+
+    </style>
 </head>
 <body>
     <div class="box">
-        <div class="id-Box">
-            <div class="id-text">
-                ID
-            </div>
+        <div class="input-Box" id="id-Box">
+            <span class="id-text">
+                ID 
+            </span>
             <input type="text" class="id" name="ID">
         </div>
-        <div class="pw-Box">
-            <div class="pw-text">
-                PW
-            </div>
+        <div class="input-Box" id="pw-Box">
+            <span class="pw-text">
+                PW 
+            </span>
             <input type="passward" class="pw" name="PW">
         </div>
+        <input type="button" class="Login" value="Login">
     </div>
 </body>
 </html>
